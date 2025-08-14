@@ -3,6 +3,7 @@ import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { fetchMovie } from "@/services/api";
+import { updateSearchCount } from "@/services/appwrite";
 import useFetch from "@/services/useFetch";
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, Image, Text, View } from "react-native";
@@ -21,6 +22,9 @@ const Search = () => {
     const timeoutId = setTimeout(async () => {
       if (searchQuery.trim()) {
         await loadMovies();
+        if (movieData?.length > 0 && movieData?.[0]) {
+          await updateSearchCount(searchQuery, movieData[0]);
+        }
       } else {
         reset();
       }
@@ -81,11 +85,15 @@ const Search = () => {
               )}
           </>
         }
-        ListEmptyComponent={!loading && !error ?(
-          <View className="mt-10 mx-5">
-            <Text className="text-center text-gray-500">{searchQuery.trim() ? 'No movies found' : 'Search for a movie'}</Text>
-          </View>
-        ): null}
+        ListEmptyComponent={
+          !loading && !error ? (
+            <View className="mt-10 mx-5">
+              <Text className="text-center text-gray-500">
+                {searchQuery.trim() ? "No movies found" : "Search for a movie"}
+              </Text>
+            </View>
+          ) : null
+        }
       />
     </View>
   );
