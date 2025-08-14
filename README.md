@@ -1,3 +1,45 @@
+# 🎬 Movie App
+
+A mobile application built with **React Native** to browse, search, and view movie details.  
+This project leverages **Appwrite** for backend services, **NativeWind** for styling, and **react-native-masked-view** for creative UI effects.
+
+---
+
+## 📸 Preview
+
+![Home](./assets/images/home.png)
+![Detail](./assets/images/detail.png)
+![Search](./assets/images/search.png)
+
+---
+
+## 📱 Features
+
+- 🔍 Search for movies by title
+- 🎥 View detailed movie information (description, release date, rating, etc.)
+- ⭐ Add movies to favorites
+- 🎨 Modern UI using **NativeWind**
+- 🔒 Backend integration with **Appwrite** for authentication & data storage
+- 🖌 Custom UI effects using **react-native-masked-view**
+
+---
+
+## 🛠 Tech Stack
+
+- **React Native**
+- **NativeWind** – TailwindCSS for React Native
+- **React Native Masked View** – For custom masking UI effects
+- **React Native Appwrite** – Appwrite SDK for backend
+
+---
+
+## 📦 Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/movie-app.git
+cd movie-app
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
