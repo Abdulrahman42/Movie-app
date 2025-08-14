@@ -8,9 +8,9 @@ This project leverages **Appwrite** for backend services, **NativeWind** for sty
 ## 📸 Preview
 
 <p align="center">
-  <img src="./assets/images/home.png" alt="home" width="150"/>
-  <img src="./assets/images/detail.png" alt="detail" width="200"/>
-  <img src="./assets/images/search.png" alt="search" width="200"/>
+  <img src="./assets/images/home.png" alt="home" width="200" style="padding:10px"/>
+  <img src="./assets/images/detail.png" alt="detail" width="200" style="padding:10px"/>
+  <img src="./assets/images/search.png" alt="search" width="200" style="padding:10px"/>
 </p>
 
 ---
